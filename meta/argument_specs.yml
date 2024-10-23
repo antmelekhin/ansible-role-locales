@@ -1,0 +1,15 @@
+---
+argument_specs:
+  main:
+    short_description: 'Locales'
+    description:
+      - 'An Ansible role to manage locales.'
+    author: 'Melekhin Anton'
+    options:
+      locales_present_list:
+        type: 'list'
+        description: 'Specify locales that will be presented.'
+        default: 'en_US.UTF-8'
+      locales_absent_list:
+        type: 'list'
+        description: 'Specify locales that will be absented.'

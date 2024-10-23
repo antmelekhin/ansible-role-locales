@@ -1,0 +1,28 @@
+---
+galaxy_info:
+  author: 'antmelekhin'
+  role_name: 'locales'
+  description: 'An Ansible role to manage locales.'
+
+  license: 'MIT'
+
+  min_ansible_version: '2.12'
+
+  platforms:
+    - name: 'Debian'
+      versions:
+        - 'buster'
+        - 'bullseye'
+        - 'bookworm'
+    - name: 'Ubuntu'
+      versions:
+        - 'bionic'
+        - 'focal'
+        - 'jammy'
+
+  galaxy_tags:
+    - 'locales'
+    - 'localization'
+    - 'system'
+
+dependencies: []
