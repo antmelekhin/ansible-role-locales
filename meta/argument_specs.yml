@@ -2,8 +2,7 @@
 argument_specs:
   main:
     short_description: 'Locales'
-    description:
-      - 'An Ansible role to manage locales.'
+    description: 'An Ansible role to manage locales.'
     author: 'Melekhin Anton'
     options:
       locales_present_list:
@@ -13,3 +12,52 @@ argument_specs:
       locales_absent_list:
         type: 'list'
         description: 'Specify locales that will be absented.'
+      locales_lang:
+        type: 'str'
+        description:
+          - 'The locale set for this variable will be used for all the LC_* variables that are not explicitly set.'
+          - 'By default, used first locale from C(locales_present_list) variable.'
+        default: '{{ locales_present_list[0] }}'
+      locales_language:
+        type: 'str'
+        description: 'Fallback locales.'
+      locales_lc:
+        type: 'dict'
+        description: 'A dictionary that contains environment variables intended to override the LANG setting and affect only a single locale category.'
+        options:
+          lc_ctype:
+            type: 'str'
+            description: 'This category determines the interpretation of byte sequences as characters, character classifications, and the behavior of character classes.'
+          lc_numeric:
+            type: 'str'
+            description: 'This category determines the formatting rules used for nonmonetary numeric values.'
+          lc_time:
+            type: 'str'
+            description: 'This category governs the formatting used for date and time values.'
+          lc_collate:
+            type: 'str'
+            description: 'This category governs the collation rules used for sorting and regular expressions, including character equivalence classes and multicharacter collating elements.'
+          lc_monetary:
+            type: 'str'
+            description: 'This category determines the formatting used for monetary-related numeric values.'
+          lc_messages:
+            type: 'str'
+            description: 'This category affects the language in which messages are displayed and what an affirmative or negative answer looks like.'
+          lc_paper:
+            type: 'str'
+            description: 'Change the settings relating to the dimensions of the standard paper size.'
+          lc_name:
+            type: 'str'
+            description: 'Change settings that describe the formats used to address persons.'
+          lc_address:
+            type: 'str'
+            description: 'Change settings that describe the formats (e.g., postal addresses) used to describe locations and geography-related items.'
+          lc_telephone:
+            type: 'str'
+            description: 'Change settings that describe the formats to be used with telephone services.'
+          lc_measurement:
+            type: 'str'
+            description: 'Change the settings relating to the measurement system in the locale.'
+          lc_identification:
+            type: 'str'
+            description: 'Change settings that relate to the metadata for the locale.'

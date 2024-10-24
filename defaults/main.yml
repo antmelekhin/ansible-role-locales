@@ -1,5 +1,11 @@
 ---
+# Generate locales
 locales_present_list:
   - 'en_US.UTF-8'
 
 locales_absent_list: []
+
+# Configure locales
+locales_lang: '{{ locales_present_list[0] }}'
+locales_language: ''
+locales_lc: {}
