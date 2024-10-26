@@ -33,8 +33,12 @@ jobs:
     strategy:
       matrix:
         include:
+          - distro: 'amazonlinux-2023'
           - distro: 'debian-11'
           - distro: 'debian-12'
+          - distro: 'fedora-39'
+          - distro: 'fedora-40'
+          - distro: 'rockylinux-8'
           - distro: 'ubuntu-20.04'
           - distro: 'ubuntu-22.04'
 
