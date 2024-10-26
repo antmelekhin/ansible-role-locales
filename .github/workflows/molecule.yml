@@ -25,3 +25,29 @@ jobs:
         run: |
           yamllint .
           ansible-lint
+
+  molecule:
+    name: 'Molecule'
+    needs: 'lint'
+    runs-on: 'ubuntu-22.04'
+    strategy:
+      matrix:
+        include:
+          - distro: 'debian-11'
+          - distro: 'debian-12'
+          - distro: 'ubuntu-20.04'
+          - distro: 'ubuntu-22.04'
+
+    steps:
+      - name: 'Checkout the codebase'
+        uses: 'actions/checkout@v4'
+
+      - name: 'Testing an Ansible role with Molecule'
+        uses: 'gofrolist/molecule-action@v2'
+        with:
+          molecule_command: 'test'
+        env:
+          PY_COLORS: '1'
+          ANSIBLE_FORCE_COLOR: '1'
+          TAG: ${{ matrix.distro }}
+          MOLECULE_PLAYBOOK: ${{ matrix.playbook }}
