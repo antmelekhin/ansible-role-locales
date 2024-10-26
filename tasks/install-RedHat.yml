@@ -2,7 +2,7 @@
 - name: 'RedHat | Install locales'
   become: true
   block:
-    - name: 'RedHat | Ensure the locales package are installed'
+    - name: 'RedHat | Ensure the locales packages are installed'
       ansible.builtin.yum:
         name:
           - 'glibc-common'
