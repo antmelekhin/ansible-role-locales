@@ -1,0 +1,9 @@
+---
+- name: 'Configure locales'
+  become: true
+  ansible.builtin.template:
+    src: 'locale.j2'
+    dest: '{{ __locales_config_path }}'
+    owner: 'root'
+    group: 'root'
+    mode: 0644

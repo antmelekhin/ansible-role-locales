@@ -1,0 +1,6 @@
+---
+__locales_config_path_dict:
+  Debian: '/etc/default/locale'
+  RedHat: '/etc/locale.conf'
+
+__locales_config_path: '{{ __locales_config_path_dict[ansible_os_family] }}'
