@@ -1,0 +1,12 @@
+---
+- name: 'RedHat | Install locales'
+  become: true
+  block:
+    - name: 'RedHat | Ensure the locales package are installed'
+      ansible.builtin.yum:
+        name:
+          - 'glibc-common'
+          - 'glibc-locale-source'
+        update_cache: true
+        state: 'present'
+      check_mode: false
