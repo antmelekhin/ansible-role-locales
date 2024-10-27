@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.1](https://github.com/antmelekhin/ansible-role-locales/compare/v1.2.0...v1.2.1) (2024-10-27)
+
+
+### Continuous Integration
+
+* add `rockylinux-9` into molecule matrix ([4ceb197](https://github.com/antmelekhin/ansible-role-locales/commit/4ceb19704260d7ce7b5ed2c8cc2d3520460d7c4d))
+
+
+### Documentation
+
+* **README:** update examples ([404e807](https://github.com/antmelekhin/ansible-role-locales/commit/404e807f7a31e40c9144d2014c62177472426017))
+
 ## [1.2.0](https://github.com/antmelekhin/ansible-role-locales/compare/v1.1.0...v1.2.0) (2024-10-26)
 
 
