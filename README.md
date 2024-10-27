@@ -53,6 +53,25 @@ Manage locales:
     - role: antmelekhin.locales
 ```
 
+Uninstall locales:
+
+```yaml
+---
+- name: 'Uninstall locales'
+  hosts: all
+
+  roles:
+    - role: antmelekhin.locales
+      locales_absent_list:
+        - 'en_US.UTF-8'
+      when: ansible_os_family == 'Debian'
+
+    - role: antmelekhin.locales
+      locales_absent_list:
+        - 'en_US.utf8'
+      when: ansible_os_family == 'RedHat'
+```
+
 License
 -------
 
