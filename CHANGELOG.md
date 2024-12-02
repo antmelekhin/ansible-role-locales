@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/antmelekhin/ansible-role-locales/compare/v1.2.1...v1.2.2) (2024-12-02)
+
+
+### Documentation
+
+* **README:** updated requirements and dependencies ([e191af1](https://github.com/antmelekhin/ansible-role-locales/commit/e191af1a468706b1e689540aa472ae61ca9f6271))
+
 ## [1.2.1](https://github.com/antmelekhin/ansible-role-locales/compare/v1.2.0...v1.2.1) (2024-10-27)
 
 
