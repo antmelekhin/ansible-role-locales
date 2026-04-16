@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.3](https://github.com/antmelekhin/ansible-role-locales/compare/v1.2.2...v1.2.3) (2026-04-16)
+
+
+### Fixes
+
+* use newer style ansible facts ([d83b3b0](https://github.com/antmelekhin/ansible-role-locales/commit/d83b3b06120d5e1b4a689f3b43050250be76ae32))
+
 ## [1.2.2](https://github.com/antmelekhin/ansible-role-locales/compare/v1.2.1...v1.2.2) (2024-12-02)
 
 
